@@ -1,0 +1,19 @@
+.andor-layover-img {
+  object-fit: cover;
+}
+
+.andor-layover-txt {
+  text-align: center;
+  color: white;
+  text-shadow:
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black;
+}
+
+.andor-layover-img, .andor-layover-txt {
+  position: absolute;
+  top: 0;
+  left:0;
+}
