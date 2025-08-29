@@ -1,6 +1,6 @@
 {
-  "manifest_version": 1,
-  "name": "Zone Drone",
+  "manifest_version": 3,
+  "name": "Andor Helper",
   "version": "1.0.0",
   "description": "A helpful extension that, when browsing shows to stream, reminds you that you could be watching Andor instead.",
   "permissions": [
@@ -14,11 +14,12 @@
     {
       "matches": [
         "<all_urls>",
-        "https://netflix.com/*"
+        "https://www.netflix.com/*"
       ],
       "js": ["content.js"],
-      "css": ["styles.css"],
-      "all_frames": true
+      "css": ["style.css"],
+      "all_frames": true,
+      "run_at": "document_end"
     }
   ],
   "icons": {
