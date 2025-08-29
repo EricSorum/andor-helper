@@ -25,6 +25,9 @@
   "icons": {
     "48": "images/andor-48.png",
     "128": "images/andor-128.png"
-  }
-
+  },
+  "web_accessible_resources": [{
+    "resources": ["images/andor-full.png"],
+    "matches": ["*://*/*"]
+  }]
 } 

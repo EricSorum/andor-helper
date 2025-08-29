@@ -1,19 +1,42 @@
 .andor-layover-img {
-  object-fit: cover;
+  height: 100%;
+  display: block;
+  margin: 5px auto;
+  position: absolute;
+  top: 0;
+  left:0;
 }
 
 .andor-layover-txt {
   text-align: center;
   color: white;
+  font-size: clamp(1rem, 2rem, 3rem);
   text-shadow:
       -1px -1px 0 black,
       1px -1px 0 black,
       -1px 1px 0 black,
       1px 1px 0 black;
+  padding: 10px 3px;
+  z-index: 5;
+  /* width: 100%; */
 }
 
-.andor-layover-img, .andor-layover-txt {
+.andor-layover-div {
   position: absolute;
   top: 0;
   left:0;
+  width: 100%;
+  height: 100%;
 }
+
+/* .andor-layover-div {
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/andor-full.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
