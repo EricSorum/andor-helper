@@ -6,6 +6,7 @@ function addLayover(movie) {
   const layoverImg = document.createElement("img");
   layoverImg.classList.add("andor-layover-img");
   movie.appendChild(layoverImg);
+  layoverImg.src = "./images/andor-full.png";
 
   const layoverTxt = document.createElement("div");
   layoverTxt.classList.add("andor-layover-txt");
