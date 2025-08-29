@@ -1,20 +1,3 @@
-/* .andor-layover-img {
-  height: 100%;
-  display: block;
-  margin: 5px auto;
-  position: absolute;
-  top: 0;
-  left:0;
-} */
-
-/* .andor-layover-div {
-  position: absolute;
-  top: 0;
-  left:0;
-  width: 100%;
-  height: 100%;
-} */
-
 .andor-layover-div {
   /* Container styles */
   position: absolute;
@@ -22,6 +5,9 @@
   left:0;
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   /* Background image styles */
   background-size: contain;
@@ -31,7 +17,7 @@
   /* Text styles */
   text-align: center;
   color: white;
-  font-size: clamp(1rem, 2rem, 3rem);
+  font-size: clamp(1.5rem, 2.5rem, 3rem);
   text-shadow:
   -1px -1px 0 black,
   1px -1px 0 black,
