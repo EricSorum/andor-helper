@@ -1,26 +1,27 @@
-function determineSelector() {
+function determineSelectors() {
   const url = window.location.href;
-  console.log("determine")
   const siteSelectors = {
-    "netflix.com": ".boxart-container",
-    "hulu.com": ".boxart-container",
-    "disneyplus.com": 'div[data-testid="set-item-tile"]',
-    "tv.apple.com": ".artwork-component",
-    "amazon.com": 'article[data-testid="card"]'
+    "netflix.com": [".boxart-container", ".hero-image-wrapper"],
+    "hulu.com": [".boxart-container"],
+    "disneyplus.com": ['a[data-testid="set-item"]',],
+    "tv.apple.com": [".artwork-component", ".video-container"],
+    "amazon.com": ['article[data-testid="card"]', 'div[data-testid="top-hero-wrapper"]']
   };
 
-  for (const [key, selector] of Object.entries(siteSelectors)) {
+  for (const [key, selectors] of Object.entries(siteSelectors)) {
     if (url.includes(key)) {
-      console.log(selector)
-      return selector;
+      return selectors;
     }
   }
 }
 
 const observer = new MutationObserver(() => {
-  const movies = document.querySelectorAll(determineSelector());
-  if (movies.length) {
-    movies.forEach(movie => addLayover(movie));
+  const selectors = determineSelectors();
+  for (let i = 0; i < selectors.length; i++) {
+    const movies = document.querySelectorAll(selectors[i]);
+    if (movies.length) {
+      movies.forEach(movie => addLayover(movie));
+    }
   }
 });
 
@@ -30,7 +31,12 @@ observer.observe(document.body, {
 });
 
 function addLayover(movie) {
-  if (movie.querySelector(".andor-layover-div")) {
+
+const isAndor = movie.getAttribute("aria-label")?.includes("Andor") ? "Andor" : "Not Andor";
+
+  if (movie.querySelector(".andor-layover-div") 
+    || isAndor === "Andor"
+  ) {
     return;
   }
   const div = document.createElement("div");
