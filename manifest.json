@@ -10,8 +10,11 @@
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>",
-        "https://www.netflix.com/*"
+        "https://www.netflix.com/*",
+        "https://tv.apple.com/*",
+        "https://www.hulu.com/*",
+        "https://www.amazon.com/*",
+        "https://www.disneyplus.com/*"
       ],
       "js": ["content.js"],
       "css": ["style.css"],
