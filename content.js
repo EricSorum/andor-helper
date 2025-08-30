@@ -13,6 +13,7 @@ function determineSelectors() {
       return selectors;
     }
   }
+  return [];
 }
 
 const observer = new MutationObserver(() => {
