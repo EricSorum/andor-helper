@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   z-index: 10000;
+  pointer-events: none;
 
   /* Background image styles */
   background-size: contain;
