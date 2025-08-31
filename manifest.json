@@ -7,6 +7,13 @@
     "activeTab",
     "scripting"
   ],
+  "host_permissions": [
+    "https://www.netflix.com/*",
+    "https://tv.apple.com/*",
+    "https://www.hulu.com/*",
+    "https://www.amazon.com/*",
+    "https://www.disneyplus.com/*"
+  ],
   "content_scripts": [
     {
       "matches": [
